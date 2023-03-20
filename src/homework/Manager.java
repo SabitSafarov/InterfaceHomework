@@ -7,10 +7,11 @@ public class Manager implements Employee{
     private int salary;
     private String[] subordinates;
 
-    public Manager(String fullName, String department, int salary) {
+    public Manager(String fullName, String department, int salary, String[] subordinates) {
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
+        this.subordinates = subordinates;
     }
 
     @Override
@@ -19,7 +20,7 @@ public class Manager implements Employee{
     }
 
     @Override
-    public String department() {
+    public String getDepartment() {
         return department;
     }
 
@@ -32,10 +33,7 @@ public class Manager implements Employee{
         return subordinates;
     }
 
-    public void getInfo() {
-        System.out.println("Имя: " + fullName);
-        System.out.println("Название департамента: " + department);
-        System.out.println("Зарплата: " + salary);
-        System.out.println();
+    public String getInfo() {
+        return  "Имя: " + fullName + "\nНазвание департамента: " + department + "\nЗарплата: " + salary + "\n";
     }
 }

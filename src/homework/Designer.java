@@ -20,7 +20,7 @@ public class Designer implements Employee{
     }
 
     @Override
-    public String department() {
+    public String getDepartment() {
         return department;
     }
 
@@ -33,10 +33,7 @@ public class Designer implements Employee{
         return designSpecialization;
     }
 
-    public void getInfo() {
-        System.out.println("Имя: " + fullName);
-        System.out.println("Название департамента: " + department);
-        System.out.println("Зарплата: " + salary);
-        System.out.println();
+    public String getInfo() {
+        return  "Имя: " + fullName + "\nНазвание департамента: " + department + "\nЗарплата: " + salary + "\n";
     }
 }
